@@ -1,0 +1,27 @@
+.donut{
+  width: 160px;
+  height: 160px;
+}
+
+.donut-ring{
+  fill: transparent;
+  stroke: #eee;
+  stroke-width: 3;
+}
+
+.donut-segment{
+  fill: transparent;
+  stroke: #2b5bff;
+  stroke-width: 3;
+  stroke-dasharray: 70 30;
+  stroke-dashoffset: 25;
+  transform-origin: 50% 50%;
+  transform: rotate(-90deg);
+}
+
+.donut-text{
+  fill: #333;
+  font-size: 6px;
+  text-anchor: middle;
+  font-weight: 700;
+}

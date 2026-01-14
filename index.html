@@ -12,10 +12,13 @@
     <h2 class="second-title">Club de foot Romand</h2>
   </header>
   <body>
-    <img src="img/Logo.png" alt="logo" id="logo" />
-    <h2 class="second-title">
-      “Un diagnostic clair de la maturité digitale des clubs de football romand”
-    </h2>
+    <section>
+      <img src="img/Logo.png" alt="logo" id="logo" />
+      <h2 class="second-title">
+        “Un diagnostic clair de la maturité digitale des clubs de football
+        romand”
+      </h2>
+    </section>
 
     <section class="stat-pill">
       <h3 class="stat-number">70%</h3>
@@ -41,27 +44,95 @@
       </div>
     </section>
 
-    <h2 class="second-title">Multiple analysis, all into one!</h2>
+    <section>
+      <h2 class="second-title">Multiple analysis, all into one!</h2>
 
-    <!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
-    <h1 data-bind-global="count" id="stat-number"></h1>
+      <!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
+      <h1 data-bind-global="count" id="stat-number"></h1>
 
-    <!-- id="teamList" : Conteneur où seront ajoutés dynamiquement les éléments de l'équipe. Le nom de cet ID ne doit pas être modifié. -->
-    <section id="teamList"></section>
+      <!-- id="teamList" : Conteneur où seront ajoutés dynamiquement les éléments de l'équipe. Le nom de cet ID ne doit pas être modifié. -->
+      <section id="teamList"></section>
 
-    <!-- id="messageContainer" : Conteneur pour afficher les messages de succès ou d'erreur. Le nom de cet ID ne doit pas être modifié. -->
-    <div id="messageContainer"></div>
+      <!-- id="messageContainer" : Conteneur pour afficher les messages de succès ou d'erreur. Le nom de cet ID ne doit pas être modifié. -->
+      <div id="messageContainer"></div>
+    </section>
+
+    <button class="downloadButton">Download full audit</button>
+
+    <h2 class="second-title">
+      “Accenderat super his incitatum propositum ad nocendum aliqua mulier.”
+    </h2>
+
+    <div class="donut-wrapper">
+      <svg class="donut" viewBox="0 0 42 42">
+        <circle class="donut-ring" cx="21" cy="21" r="15.9155"></circle>
+        <circle class="donut-segment" cx="21" cy="21" r="15.9155"></circle>
+        <text x="21" y="23" class="donut-text">70%</text>
+      </svg>
+    </div>
+
+    <section class="two-cols">
+      <div class="col-left">
+        <h2>
+          Hac ita persuasione reducti intra moenia bellatores observatis undique
+          portarum aditibus.
+        </h2>
+      </div>
+
+      <div class="col-right">
+        <p>
+          Accenderat super his incitatum propositum ad nocendum aliqua mulier
+          vilis...
+        </p>
+      </div>
+    </section>
+
+    <button class="downloadButton">
+      Inscrivez-vous et recevez l'audit gratuitement !
+    </button>
 
     <!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
-    <form id="downloadForm">
-      <input type="text" name="firstName" required placeholder="Prénom" />
-      <input type="text" name="lastName" required placeholder="Nom" />
-      <input type="email" name="email" required placeholder="Email" />
-      <label>
+    <form id="downloadForm" class="download-form">
+      <div class="form-row">
+        <div class="form-field">
+          <label class="field-label" for="lastName">Nom</label>
+          <input
+            id="lastName"
+            type="text"
+            name="lastName"
+            required
+            placeholder=""
+          />
+        </div>
+
+        <div class="form-field">
+          <label class="field-label" for="firstName">Prénom</label>
+          <input
+            id="firstName"
+            type="text"
+            name="firstName"
+            required
+            placeholder=""
+          />
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label class="field-label" for="email">Email</label>
+        <input id="email" type="email" name="email" required placeholder="" />
+      </div>
+
+      <label class="checkbox-row">
         <input type="checkbox" name="newsletterAgreement" required />
-        J'accepte de recevoir la newsletter
+        <span>J'accepte de recevoir la newsletter</span>
       </label>
-      <button type="submit">Télécharger le rapport</button>
+
+      <button class="download-cta" type="submit">Télécharger</button>
     </form>
   </body>
+  <footer id="footer">
+    <h1>Contact</h1>
+    <p>Email: contact@footballromanddigital.com</p>
+    <img src="img/Logo.png" alt="logo" id="logoFooter" />
+  </footer>
 </html>
