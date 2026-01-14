@@ -1,27 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <script src="src/main.js" type="module" defer></script>
+  </head>
+  <header>
+    <h1 id="title">Football romand & digital</h1>
+    <h2 class="second-title">Club de foot Romand</h2>
+  </header>
+  <body>
+    <img src="img/Logo.png" alt="logo" id="logo" />
+    <h2 class="second-title">
+      “Un diagnostic clair de la maturité digitale des clubs de football romand”
+    </h2>
 
-</head>
-<body>
-    <!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
-    <h1 data-bind-global="count"></h1>
-    
-    <!-- id="teamList" : Conteneur où seront ajoutés dynamiquement les éléments de l'équipe. Le nom de cet ID ne doit pas être modifié. -->
-    <section id="teamList">
+    <section class="stat-pill">
+      <h3 class="stat-number">70%</h3>
+      <p class="stat-text">
+        C'est le pourcentage de clubs romands qui gagnent leurs match après la
+        lecture d'un des rapports.
+      </p>
     </section>
+
+    <section class="two-cols">
+      <div class="col-left">
+        <h2>
+          Hac ita persuasione reducti intra moenia bellatores observatis undique
+          portarum aditibus.
+        </h2>
+      </div>
+
+      <div class="col-right">
+        <p>
+          Accenderat super his incitatum propositum ad nocendum aliqua mulier
+          vilis...
+        </p>
+      </div>
+    </section>
+
+    <h2 class="second-title">Multiple analysis, all into one!</h2>
+
+    <!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
+    <h1 data-bind-global="count" id="stat-number"></h1>
+
+    <!-- id="teamList" : Conteneur où seront ajoutés dynamiquement les éléments de l'équipe. Le nom de cet ID ne doit pas être modifié. -->
+    <section id="teamList"></section>
 
     <!-- id="messageContainer" : Conteneur pour afficher les messages de succès ou d'erreur. Le nom de cet ID ne doit pas être modifié. -->
     <div id="messageContainer"></div>
 
     <!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
     <form id="downloadForm">
+      <input type="text" name="firstName" required placeholder="Prénom" />
+      <input type="text" name="lastName" required placeholder="Nom" />
+      <input type="email" name="email" required placeholder="Email" />
+      <label>
+        <input type="checkbox" name="newsletterAgreement" required />
+        J'accepte de recevoir la newsletter
+      </label>
+      <button type="submit">Télécharger le rapport</button>
     </form>
-
-</body>
+  </body>
 </html>
