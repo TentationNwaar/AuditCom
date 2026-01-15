@@ -7,8 +7,15 @@
   font-family: "TikTok Sans", Arial, sans-serif;
 }
 
+html{
+  background-color: #fff8f8;
+}
+
 body {
-  margin: 20px;
+  /* On enlève la marge extérieure et on garde un padding,
+     MAIS pas en bas pour que le footer colle au bord de la page */
+  margin: 0;
+  padding: 20px 20px 0;
   background-color: #fff8f8;
   color: #333;
   font-family: Arial, Helvetica, sans-serif;
@@ -99,8 +106,30 @@ main {
   font-size: 3.5em;
   color: #1b56fd;
   text-align: center;
-  margin-bottom: 10%;
+  margin-top: 10%;
+  margin-bottom: 5%;
   font-weight: 300;
+}
+
+.download-instruction{
+  font-weight: 600;
+  font-size: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 100%;
+  padding: 20px 56px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #2b5bff, #0a2dff);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  max-width: 920px;
+  margin: 40px auto;
+  margin-bottom: 2%;
 }
 
 .stat-pill {
@@ -168,6 +197,8 @@ main {
 
 .col-right {
   color: #1b56fd;
+  font-size: 20px;
+  margin-bottom: 30%;
 }
 
 #stat-number {
@@ -343,8 +374,11 @@ main {
   background-color: #0118d8;
   text-align: center;
   font-size: 14px;
-  margin-left: calc(-50vw + 50%);
   width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 0;
 }
 
 #logoFooter {
@@ -426,6 +460,14 @@ main {
 
 .donut-legend strong {
   font-weight: 800;
+}
+
+.word-cloud {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  margin: 40px auto;
+  display: block;
 }
 
 .toggle-teams {
@@ -672,19 +714,59 @@ footer {
     padding: 28px 32px;
     margin: 32px auto;
   }
+
+  #title {
+    font-size: 4em;
+  }
+
+  .second-title {
+    font-size: 2.5em;
+  }
 }
 
 @media (max-width: 600px) {
+  body {
+    padding: 15px 15px 0;
+  }
+
+  #title {
+    font-size: 2.5em;
+    margin-top: 2%;
+  }
+
+  .second-title {
+    font-size: 1.8em;
+    margin-top: 20%;
+    margin-bottom: 20%;
+  }
+
   .stat-pill {
-    padding: 36px 28px;
+    padding: 24px 20px;
     border-radius: 9999px;
+    margin-bottom: 30%;
   }
 
   .two-cols {
     align-items: start;
     grid-template-columns: 1fr;
     gap: 24px;
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
+
+  .col-right {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  #stat-number {
+    margin-bottom: 40px;
+  }
+
+  #teamList {
+    margin-top: 40px;
+  }
+
   .team-item {
     grid-template-columns: auto 1fr;
     gap: 6px;
@@ -749,6 +831,12 @@ footer {
     grid-template-columns: 1fr;
     justify-items: center;
     gap: 20px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .donut {
+    margin-left: 0;
   }
 
   .donut-legend {
@@ -756,8 +844,35 @@ footer {
     text-align: center;
   }
 
+  .word-cloud {
+    max-width: 100%;
+    margin: 30px auto;
+    margin-top: 30%;
+  }
+
   .bars-chart {
-    margin-top: 28px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    max-width: 100%;
+  }
+
+  .bars-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .chart-wrapper {
+    padding-left: 20px;
+  }
+
+  .y-axis-label {
+    left: -40px;
+    font-size: 11px;
+  }
+
+  .x-axis-label {
+    margin-top: 20px;
+    font-size: 11px;
   }
 
   .simple-bar-chart {
@@ -766,8 +881,40 @@ footer {
     --padding-block: 2.2rem;
   }
 
-  .simple-bar-chart > .item > .label,
+  .simple-bar-chart > .item > .label {
+    font-size: 10px;
+    margin-top: 6px;
+  }
+
   .simple-bar-chart > .item > .value {
     font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .download-form {
+    gap: 14px;
+    margin-top: 60px;
+  }
+
+  .download-cta {
+    font-size: 18px;
+    height: 52px;
+  }
+
+  .downloadButton--cta {
+    font-size: 16px;
+    height: 52px;
+    margin-block: 60px;
+    padding: 0 20px;
+  }
+
+  #footer {
+    margin-top: 80px;
+    padding: 16px;
+    font-size: 13px;
+  }
+
+  #logoFooter {
+    max-width: 100px;
   }
 }
