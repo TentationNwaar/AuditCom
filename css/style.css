@@ -1,13 +1,9 @@
 @import "reset.css";
-
-img {
-    width: 250px;
-}
 @import "donuts.css";
-
 
 * {
   box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 body {
@@ -30,11 +26,27 @@ main {
   overflow: hidden;
 }
 
+#teamList img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
+}
+
+.team-item h2,
+.team-item p {
+  text-align: left;
+}
+
 #title {
   font-size: 2.5em;
   color: #0118d8;
   text-align: center;
   margin-bottom: 10px;
+}
+
+.team-text {
+  align-items: left;
 }
 
 .second-title {
@@ -54,8 +66,8 @@ main {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  width: min(900px, 100%);
-  padding: 64px 72px;
+  width: min(820px, 100%);
+  padding: 48px 56px;
   border-radius: 9999px;
   background: linear-gradient(135deg, #2b5bff, #0a2dff);
   color: #fff;
@@ -68,7 +80,7 @@ main {
 
 .stat-number {
   margin: 0;
-  font-size: clamp(56px, 7vw, 96px);
+  font-size: clamp(44px, 6vw, 72px);
   font-weight: 800;
   line-height: 1;
   text-align: center;
@@ -119,7 +131,10 @@ main {
 
 .team-item {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto 1fr auto; /* logo à gauche, texte juste à côté */
+  grid-template-rows: auto auto; /* 2 lignes : nom / auteurs (et date) */
+  column-gap: 16px;
+  row-gap: 6px;
   align-items: center;
   padding: 12px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -135,7 +150,33 @@ main {
   margin: 0;
   font-size: 14px;
   color: #666;
+}
+
+.team-item img {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.team-item [data-bind="uploadedAt"] {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
   white-space: nowrap;
+}
+
+.team-item [data-bind="teamName"] {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: start;
+  text-align: left;
+}
+
+.team-item [data-bind="author"] {
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: start;
+  text-align: left;
+  white-space: normal;
 }
 
 .downloadButton {
@@ -144,21 +185,21 @@ main {
   margin-block: 60px;
   padding: 12px 24px;
   font-size: 16px;
-  background-color: #F6828C;
+  background-color: #f6828c;
   color: #fff;
   border: none;
   border-radius: 82px;
   cursor: pointer;
 }
 
-.donut-wrapper{
+.donut-wrapper {
   margin-left: auto;
   margin-right: auto;
   display: flex;
   justify-content: center;
 }
 
-.download-form{
+.download-form {
   width: min(900px, 100%);
   margin: 40px auto 0;
   display: flex;
@@ -166,26 +207,26 @@ main {
   gap: 18px;
 }
 
-.form-row{
+.form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px;
 }
 
-.form-field{
+.form-field {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.field-label{
+.field-label {
   font-size: 22px;
-  color: rgba(0,0,0,0.45);
+  color: rgba(0, 0, 0, 0.45);
   font-weight: 500;
 }
 
 .download-form input[type="text"],
-.download-form input[type="email"]{
+.download-form input[type="email"] {
   width: 100%;
   height: 56px;
   border: 0;
@@ -197,11 +238,11 @@ main {
 }
 
 .download-form input[type="text"]:focus,
-.download-form input[type="email"]:focus{
+.download-form input[type="email"]:focus {
   box-shadow: 0 0 0 3px rgba(43, 91, 255, 0.18);
 }
 
-.checkbox-row{
+.checkbox-row {
   display: flex;
   align-items: center;
   gap: 18px;
@@ -211,13 +252,13 @@ main {
   margin-top: 6px;
 }
 
-.checkbox-row input[type="checkbox"]{
+.checkbox-row input[type="checkbox"] {
   width: 22px;
   height: 22px;
   accent-color: #cfcfcf;
 }
 
-.download-cta{
+.download-cta {
   align-self: center;
   width: min(380px, 100%);
   height: 60px;
@@ -231,7 +272,7 @@ main {
   box-shadow: 0 18px 40px rgba(255, 95, 112, 0.28);
 }
 
-.download-cta:active{
+.download-cta:active {
   transform: translateY(1px);
 }
 
@@ -250,6 +291,125 @@ main {
   margin-top: 10px;
   max-width: 120px;
   margin-left: auto;
+}
+
+.downloadButton--cta {
+  width: min(900px, 100%);
+  height: 60px;
+  margin: 0 auto 20px auto;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 0 32px;
+  margin-block: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  color: #fff;
+  background: linear-gradient(180deg, #ff7e8a, #ff5f70);
+  box-shadow: 0 18px 40px rgba(255, 95, 112, 0.28);
+}
+
+.downloadButton:link,
+.downloadButton:visited {
+  text-decoration: none;
+}
+
+/* Cache le checkbox (mais il reste fonctionnel via le label) */
+.toggle-teams {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Bouton + */
+.toggle-teams-btn {
+  width: min(900px, 100%);
+  margin: 10px auto 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 700;
+  color: #2b5bff;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Le rond avec + / − */
+.toggle-teams-btn::before {
+  content: "+";
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 2px solid rgba(43, 91, 255, 0.35);
+}
+
+/* Texte du bouton : par défaut on montre "Afficher toutes les équipes" */
+.toggle-text-less{
+  display: none;
+}
+
+/* Quand ouvert : on affiche "Afficher moins" */
+#toggleTeams:checked + .toggle-teams-btn .toggle-text-more{
+  display: none;
+}
+
+#toggleTeams:checked + .toggle-teams-btn .toggle-text-less{
+  display: inline;
+}
+
+/* Par défaut : on affiche 3 équipes */
+#teamList .team-item:nth-child(n + 4) {
+  display: none;
+}
+
+/* Quand on clique : on affiche tout */
+#toggleTeams:checked ~ #teamList .team-item:nth-child(n + 4) {
+  display: grid; /* important car tes items utilisent grid */
+}
+
+/* Quand ouvert : on met un − */
+#toggleTeams:checked + .toggle-teams-btn::before {
+  content: "−";
+}
+
+#messageContainer {
+  width: min(900px, 100%);
+  margin: 18px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#messageContainer .message {
+  padding: 14px 18px;
+  border-radius: 14px;
+  font-weight: 600;
+}
+
+#messageContainer .progress-container {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#messageContainer progress.progress-bar {
+  width: 100%;
+  height: 14px;
+}
+
+#messageContainer .progress-text {
+  white-space: nowrap;
+  font-size: 14px;
+  opacity: 0.8;
 }
 
 header {
@@ -272,25 +432,30 @@ footer {
     grid-template-columns: 1fr;
     gap: 24px;
   }
-  .team-item{
-    grid-template-columns: 1fr;
+  .team-item {
+    grid-template-columns: auto 1fr;
     gap: 6px;
   }
 
-  .team-item p{
+  .team-item p {
     font-size: 13px;
   }
 
-  .form-row{
+  .team-item [data-bind="uploadedAt"] {
+    grid-column: 2;
+    justify-self: end;
+  }
+
+  .form-row {
     grid-template-columns: 1fr;
     gap: 18px;
   }
 
-  .field-label{
+  .field-label {
     font-size: 18px;
   }
 
-  .checkbox-row{
+  .checkbox-row {
     font-size: 18px;
   }
 }

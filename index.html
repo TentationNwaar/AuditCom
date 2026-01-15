@@ -9,7 +9,7 @@
   </head>
   <header>
     <h1 id="title">Football romand & digital</h1>
-    <h2 class="second-title">Club de foot Romand</h2>
+    <h2 class="second-title">Forces, faiblesses et tendances</h2>
   </header>
   <body>
     <section>
@@ -21,114 +21,129 @@
     </section>
 
     <section class="stat-pill">
-      <h3 class="stat-number">70%</h3>
-      <p class="stat-text">
-        C'est le pourcentage de clubs romands qui gagnent leurs match après la
-        lecture d'un des rapports.
-      </p>
+      <h3 class="stat-number">165 litres d’eau perdus</h3>
+      <p class="stat-text">Voyez comment réduire cet impact sur votre site</p>
     </section>
 
     <section class="two-cols">
       <div class="col-left">
-        <h2>
-          Hac ita persuasione reducti intra moenia bellatores observatis undique
-          portarum aditibus.
-        </h2>
+        <h2>Performance et résultat</h2>
       </div>
 
       <div class="col-right">
         <p>
-          Accenderat super his incitatum propositum ad nocendum aliqua mulier
-          vilis...
+          Un site lent, c’est un visiteur qui part. Et sur mobile, c’est souvent
+          avant même que la page ne s’affiche. <br />
+          <br />
+          Notre analyse montre que la performance est l’un des points faibles
+          les plus fréquents des sites de clubs : temps de chargement excessifs,
+          pages trop lourdes et optimisations absentes. <br />
+          <br />
+
+          Ces défauts pénalisent directement l’engagement des utilisateurs, le
+          référencement sur Google et la crédibilité du club. Le rapport
+          détaille précisément où le temps est perdu, pourquoi, et comment
+          corriger ces problèmes sans refonte complète.
         </p>
       </div>
     </section>
 
     <section>
-      <h2 class="second-title">Multiple analysis, all into one!</h2>
+      <h2 class="second-title">
+        Découvrez tous les audits dans un seul rapport
+      </h2>
 
       <!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
-      <h1 data-bind-global="count" id="stat-number"></h1>
+      <h1 id="stat-number">
+        <span data-bind-global="count"></span>
+        rapports analysés
+      </h1>
+
+      <input type="checkbox" id="toggleTeams" class="toggle-teams" />
+
+      <section id="teamList"></section>
 
       <!-- id="teamList" : Conteneur où seront ajoutés dynamiquement les éléments de l'équipe. Le nom de cet ID ne doit pas être modifié. -->
       <section id="teamList"></section>
 
+      <label for="toggleTeams" class="toggle-teams-btn">
+        Afficher toutes les équipes
+      </label>
+
+      <a href="#downloadForm" class="downloadButton downloadButton--cta">
+        Inscrivez-vous et recevez l'audit gratuitement !
+      </a>
+
+      <h2 class="second-title">
+        “WordPress est partout. Est-ce vraiment une bonne nouvelle”
+      </h2>
+
+      <div class="donut-wrapper">
+        <svg class="donut" viewBox="0 0 42 42">
+          <circle class="donut-ring" cx="21" cy="21" r="15.9155"></circle>
+          <circle class="donut-segment" cx="21" cy="21" r="15.9155"></circle>
+          <text x="21" y="23" class="donut-text">70%</text>
+        </svg>
+      </div>
+
+      <section class="two-cols">
+        <div class="col-left">
+          <h2>
+            Hac ita persuasione reducti intra moenia bellatores observatis
+            undique portarum aditibus.
+          </h2>
+        </div>
+
+        <div class="col-right">
+          <p>
+            Accenderat super his incitatum propositum ad nocendum aliqua mulier
+            vilis...
+          </p>
+        </div>
+      </section>
+
+      <!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
+      <form id="downloadForm" class="download-form">
+        <div class="form-row">
+          <div class="form-field">
+            <label class="field-label" for="lastName">Nom</label>
+            <input
+              id="lastName"
+              type="text"
+              name="lastName"
+              required
+              placeholder=""
+            />
+          </div>
+
+          <div class="form-field">
+            <label class="field-label" for="firstName">Prénom</label>
+            <input
+              id="firstName"
+              type="text"
+              name="firstName"
+              required
+              placeholder=""
+            />
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label class="field-label" for="email">Email</label>
+          <input id="email" type="email" name="email" required placeholder="" />
+        </div>
+
+        <label class="checkbox-row">
+          <input type="checkbox" name="newsletterAgreement" required />
+          <span>J'accepte de recevoir la newsletter</span>
+        </label>
+
+        <button class="download-cta" type="submit">Télécharger</button>
+      </form>
+
       <!-- id="messageContainer" : Conteneur pour afficher les messages de succès ou d'erreur. Le nom de cet ID ne doit pas être modifié. -->
       <div id="messageContainer"></div>
     </section>
-
-    <button class="downloadButton">Download full audit</button>
-
-    <h2 class="second-title">
-      “Accenderat super his incitatum propositum ad nocendum aliqua mulier.”
-    </h2>
-
-    <div class="donut-wrapper">
-      <svg class="donut" viewBox="0 0 42 42">
-        <circle class="donut-ring" cx="21" cy="21" r="15.9155"></circle>
-        <circle class="donut-segment" cx="21" cy="21" r="15.9155"></circle>
-        <text x="21" y="23" class="donut-text">70%</text>
-      </svg>
-    </div>
-
-    <section class="two-cols">
-      <div class="col-left">
-        <h2>
-          Hac ita persuasione reducti intra moenia bellatores observatis undique
-          portarum aditibus.
-        </h2>
-      </div>
-
-      <div class="col-right">
-        <p>
-          Accenderat super his incitatum propositum ad nocendum aliqua mulier
-          vilis...
-        </p>
-      </div>
-    </section>
-
-    <a href="#downloadForm" class="downloadButton">
-      Inscrivez-vous et recevez l'audit gratuitement !
-    </a>
-
-    <!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
-    <form id="downloadForm" class="download-form">
-      <div class="form-row">
-        <div class="form-field">
-          <label class="field-label" for="lastName">Nom</label>
-          <input
-            id="lastName"
-            type="text"
-            name="lastName"
-            required
-            placeholder=""
-          />
-        </div>
-
-        <div class="form-field">
-          <label class="field-label" for="firstName">Prénom</label>
-          <input
-            id="firstName"
-            type="text"
-            name="firstName"
-            required
-            placeholder=""
-          />
-        </div>
-      </div>
-
-      <div class="form-field">
-        <label class="field-label" for="email">Email</label>
-        <input id="email" type="email" name="email" required placeholder="" />
-      </div>
-
-      <label class="checkbox-row">
-        <input type="checkbox" name="newsletterAgreement" required />
-        <span>J'accepte de recevoir la newsletter</span>
-      </label>
-
-      <button class="download-cta" type="submit">Télécharger</button>
-    </form>
   </body>
   <footer id="footer">
     <h1>Contact</h1>
