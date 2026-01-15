@@ -1,4 +1,8 @@
 @import "reset.css";
+
+img {
+    width: 250px;
+}
 @import "donuts.css";
 
 
