@@ -7,13 +7,18 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="src/main.js" type="module" defer></script>
   </head>
-  <header>
-    <h1 id="title">Football romand & digital</h1>
-    <h2 class="second-title">Forces, faiblesses et tendances</h2>
-  </header>
+
   <body>
+    <header>
+      <h1 id="title">Football romand & digital</h1>
+
+      <div class="hero-grid">
+        <img src="img/Logo.svg" alt="logo" class="hero-illustration" />
+        <h2 class="hero-subtitle">Forces, faiblesses et tendances</h2>
+      </div>
+    </header>
+
     <section>
-      <img src="img/Logo.png" alt="logo" id="logo" />
       <h2 class="second-title">
         “Un diagnostic clair de la maturité digitale des clubs de football
         romand”
@@ -39,7 +44,6 @@
           les plus fréquents des sites de clubs : temps de chargement excessifs,
           pages trop lourdes et optimisations absentes. <br />
           <br />
-
           Ces défauts pénalisent directement l’engagement des utilisateurs, le
           référencement sur Google et la crédibilité du club. Le rapport
           détaille précisément où le temps est perdu, pourquoi, et comment
@@ -53,21 +57,23 @@
         Découvrez tous les audits dans un seul rapport
       </h2>
 
-      <!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
       <h1 id="stat-number">
         <span data-bind-global="count"></span>
         rapports analysés
       </h1>
 
+      <!-- Toggle : doit rester AVANT #teamList pour pouvoir cacher/afficher en CSS -->
       <input type="checkbox" id="toggleTeams" class="toggle-teams" />
 
+      <!-- Liste des équipes -->
       <section id="teamList"></section>
 
-      <!-- id="teamList" : Conteneur où seront ajoutés dynamiquement les éléments de l'équipe. Le nom de cet ID ne doit pas être modifié. -->
-      <section id="teamList"></section>
-
+      <!-- Bouton toggle : placé SOUS la liste -->
       <label for="toggleTeams" class="toggle-teams-btn">
-        Afficher toutes les équipes
+        <span class="toggle-text toggle-text-more"
+          >Afficher toutes les équipes</span
+        >
+        <span class="toggle-text toggle-text-less">Afficher moins</span>
       </label>
 
       <a href="#downloadForm" class="downloadButton downloadButton--cta">
@@ -102,7 +108,6 @@
         </div>
       </section>
 
-      <!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
       <form id="downloadForm" class="download-form">
         <div class="form-row">
           <div class="form-field">
@@ -141,13 +146,13 @@
         <button class="download-cta" type="submit">Télécharger</button>
       </form>
 
-      <!-- id="messageContainer" : Conteneur pour afficher les messages de succès ou d'erreur. Le nom de cet ID ne doit pas être modifié. -->
       <div id="messageContainer"></div>
     </section>
+
+    <footer id="footer">
+      <h1>Contact</h1>
+      <p>Email: contact@footballromanddigital.com</p>
+      <img src="img/Logo.png" alt="logo" id="logoFooter" />
+    </footer>
   </body>
-  <footer id="footer">
-    <h1>Contact</h1>
-    <p>Email: contact@footballromanddigital.com</p>
-    <img src="img/Logo.png" alt="logo" id="logoFooter" />
-  </footer>
 </html>
