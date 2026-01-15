@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <header>
+    <header class="fade-in">
       <h1 id="title">Football romand & digital</h1>
 
       <div class="hero-grid">
@@ -18,19 +18,19 @@
       </div>
     </header>
 
-    <section>
+    <section class="fade-in">
       <h2 class="second-title">
         “Un diagnostic clair de la maturité digitale des clubs de football
         romand”
       </h2>
     </section>
 
-    <section class="stat-pill">
+    <section class="stat-pill fade-in">
       <h3 class="stat-number">165 litres d’eau perdus</h3>
       <p class="stat-text">Voyez comment réduire cet impact sur votre site</p>
     </section>
 
-    <section class="two-cols">
+    <section class="two-cols fade-in">
       <div class="col-left">
         <h2>Performance et résultat</h2>
       </div>
@@ -52,7 +52,39 @@
       </div>
     </section>
 
-    <section>
+    <section class="bars-chart fade-in">
+        <h3 class="bars-title">Temps de chargements des pages</h3>
+
+        <div class="chart-wrapper">
+          <div class="y-axis-label">Temps (secondes)</div>
+          
+          <div class="simple-bar-chart" style="--line-count: 5">
+            <div class="item" style="--clr: #2b5bff; --val: 100">
+              <div class="label">Pire performance</div>
+              <div class="value">27s</div>
+            </div>
+
+            <div class="item" style="--clr: #e23a3a; --val: 7.4">
+              <div class="label">Meilleure performance</div>
+              <div class="value">2s</div>
+            </div>
+
+            <div class="item" style="--clr: #ff8a00; --val: 55.6">
+              <div class="label">Moyenne observée</div>
+              <div class="value">15s</div>
+            </div>
+
+            <div class="item" style="--clr: #18a999; --val: 11.1">
+              <div class="label">Objectif recommandé</div>
+              <div class="value">3s</div>
+            </div>
+          </div>
+          
+          <div class="x-axis-label">Sites web</div>
+        </div>
+      </section>
+
+    <section class="fade-in">
       <h2 class="second-title">
         Découvrez tous les audits dans un seul rapport
       </h2>
@@ -66,7 +98,7 @@
       <input type="checkbox" id="toggleTeams" class="toggle-teams" />
 
       <!-- Liste des équipes -->
-      <section id="teamList"></section>
+      <section id="teamList" class="fade-in"></section>
 
       <!-- Bouton toggle : placé SOUS la liste -->
       <label for="toggleTeams" class="toggle-teams-btn">
@@ -76,39 +108,81 @@
         <span class="toggle-text toggle-text-less">Afficher moins</span>
       </label>
 
-      <a href="#downloadForm" class="downloadButton downloadButton--cta">
+      <a
+        href="#downloadForm"
+        class="downloadButton downloadButton--cta fade-in"
+      >
         Inscrivez-vous et recevez l'audit gratuitement !
       </a>
 
       <h2 class="second-title">
-        “WordPress est partout. Est-ce vraiment une bonne nouvelle”
+        “WordPress est partout... Est-ce vraiment une bonne nouvelle ?”
       </h2>
 
-      <div class="donut-wrapper">
-        <svg class="donut" viewBox="0 0 42 42">
+      <section class="donut-chart fade-in">
+        <svg
+          class="donut"
+          viewBox="0 0 42 42"
+          style="--wp: 70; --custom: 20; --other: 10"
+        >
           <circle class="donut-ring" cx="21" cy="21" r="15.9155"></circle>
-          <circle class="donut-segment" cx="21" cy="21" r="15.9155"></circle>
-          <text x="21" y="23" class="donut-text">70%</text>
+          <circle
+            class="donut-segment donut-segment--wp"
+            cx="21"
+            cy="21"
+            r="15.9155"
+          ></circle>
+          <circle
+            class="donut-segment donut-segment--custom"
+            cx="21"
+            cy="21"
+            r="15.9155"
+          ></circle>
+          <circle
+            class="donut-segment donut-segment--other"
+            cx="21"
+            cy="21"
+            r="15.9155"
+          ></circle>
+          <text x="21" y="23" class="donut-text"></text>
         </svg>
-      </div>
 
-      <section class="two-cols">
+        <ul class="donut-legend">
+          <li>
+            <span class="legend-dot legend-wp"></span>
+            WordPress <strong>82%</strong>
+          </li>
+          <li>
+            <span class="legend-dot legend-custom"></span>
+            Custom <strong>8%</strong>
+          </li>
+          <li>
+            <span class="legend-dot legend-other"></span>
+            Autres <strong>10%</strong>
+          </li>
+        </ul>
+      </section>
+
+      <section class="two-cols fade-in">
         <div class="col-left">
-          <h2>
-            Hac ita persuasione reducti intra moenia bellatores observatis
-            undique portarum aditibus.
-          </h2>
+          <h2>Le CMS : levier de performance pour votre club</h2>
         </div>
 
         <div class="col-right">
           <p>
-            Accenderat super his incitatum propositum ad nocendum aliqua mulier
-            vilis...
+            Pilier de votre autonomie, le CMS permet de diffuser l'actualité
+            sportive en temps réel. Pourtant, sans un entretien rigoureux,
+            l’obsolescence logicielle devient un frein technique majeur qui
+            dégrade l'expérience de vos supporters, particulièrement sur mobile.
+            Maîtriser cet outil est la clé pour transformer votre site vitrine
+            en un véritable levier de revenus via la billetterie et la boutique.
+            Téléchargez cet audit complet pour optimiser durablement votre
+            performance digitale.
           </p>
         </div>
       </section>
 
-      <form id="downloadForm" class="download-form">
+      <form id="downloadForm" class="download-form fade-in">
         <div class="form-row">
           <div class="form-field">
             <label class="field-label" for="lastName">Nom</label>
@@ -146,13 +220,14 @@
         <button class="download-cta" type="submit">Télécharger</button>
       </form>
 
-      <div id="messageContainer"></div>
+      <div id="messageContainer" class="fade-in"></div>
     </section>
 
-    <footer id="footer">
+    <footer id="footer" class="fade-in">
       <h1>Contact</h1>
       <p>Email: contact@footballromanddigital.com</p>
-      <img src="img/Logo.png" alt="logo" id="logoFooter" />
+      <img src="img/Logo.svg" alt="logo" id="logoFooter" />
     </footer>
   </body>
+  <script src="src/fade.js" defer></script>
 </html>

@@ -11,17 +11,80 @@
 
 .donut-segment{
   fill: transparent;
-  stroke: #2b5bff;
   stroke-width: 3;
-  stroke-dasharray: 70 30;
+  stroke-linecap: round;
   stroke-dashoffset: 25;
   transform-origin: 50% 50%;
   transform: rotate(-90deg);
+}
+
+.donut{
+  --wp: 70;
+  --custom: 20;
+  --other: 10;
+}
+
+.donut-segment--wp{
+  stroke: #2b5bff;
+  stroke-dasharray: calc(var(--wp) * 1) calc((100 - var(--wp)) * 1);
+  stroke-dashoffset: 25;
+}
+
+.donut-segment--custom{
+  stroke: #e23a3a;
+  stroke-dasharray: calc(var(--custom) * 1) calc((100 - var(--custom)) * 1);
+  stroke-dashoffset: calc(25 - (var(--wp) * 1));
+}
+
+.donut-segment--other{
+  stroke: #ff8a00;
+  stroke-dasharray: calc(var(--other) * 1) calc((100 - var(--other)) * 1);
+  stroke-dashoffset: calc(25 - ((var(--wp) + var(--custom)) * 1));
 }
 
 .donut-text{
   fill: #333;
   font-size: 6px;
   text-anchor: middle;
+  font-weight: 800;
+}
+
+.donut-legend{
+  margin-top: 16px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.donut-legend li{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legend-dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-wp{
+  background-color: #2b5bff;
+}
+
+.legend-custom{
+  background-color: #e23a3a;
+}
+
+.legend-other{
+  background-color: #ff8a00;
+}
+
+.donut-legend strong{
+  margin-left: 4px;
   font-weight: 700;
 }
