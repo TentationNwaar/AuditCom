@@ -1,16 +1,13 @@
 export function fillTemplate(template, data) {
   const frag = template.content.cloneNode(true);
 
-  // item text bindings
   frag.querySelectorAll("[data-bind]").forEach(el => {
     const key = el.getAttribute("data-bind");
     el.textContent = data[key] ?? "";
   });
 
-  // item attribute bindings
   frag.querySelectorAll("*").forEach(el => {
     for (const attr of Array.from(el.attributes)) {
-
       if (!attr.name.startsWith("data-bind-attr-")) continue;
       const realAttr = attr.name.replace("data-bind-attr-", "");
       const key = attr.value;

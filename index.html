@@ -91,16 +91,12 @@
 
       <h1 id="stat-number">
         <span data-bind-global="count"></span>
-        rapports analysés
+        clubs analysés
       </h1>
 
-      <!-- Toggle : doit rester AVANT #teamList pour pouvoir cacher/afficher en CSS -->
       <input type="checkbox" id="toggleTeams" class="toggle-teams" />
+      <section id="teamList"></section>
 
-      <!-- Liste des équipes -->
-      <section id="teamList" class="fade-in"></section>
-
-      <!-- Bouton toggle : placé SOUS la liste -->
       <label for="toggleTeams" class="toggle-teams-btn">
         <span class="toggle-text toggle-text-more"
           >Afficher toutes les équipes</span
@@ -203,9 +199,7 @@
         </div>
       </section>
 
-      <p class="fade-in download-instruction">
-        Inscrivez-vous et recevez l'audit gratuitement !
-      </p>
+      <p class="fade-in download-instruction">Recevez l'audit gratuitement !</p>
 
       <form id="downloadForm" class="download-form fade-in">
         <div class="form-row">

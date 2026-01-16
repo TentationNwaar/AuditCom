@@ -1,6 +1,9 @@
 .donut{
   width: 160px;
   height: 160px;
+  --wp: 70;
+  --custom: 20;
+  --other: 10;
 }
 
 .donut-ring{
@@ -18,14 +21,8 @@
   transform: rotate(-90deg);
 }
 
-.donut{
-  --wp: 70;
-  --custom: 20;
-  --other: 10;
-}
-
 .donut-segment--wp{
-  stroke: #2b5bff;
+  stroke: #0118d8;
   stroke-dasharray: calc(var(--wp) * 1) calc((100 - var(--wp)) * 1);
   stroke-dashoffset: 25;
 }
