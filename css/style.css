@@ -1,6 +1,7 @@
 @import "reset.css";
 @import "donuts.css";
 @import url("https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap");
+@import "animations.css";
 
 * {
   box-sizing: border-box;
@@ -104,12 +105,15 @@ main {
 }
 
 .second-title {
-  font-size: 3.5em;
+  font-size: 3.5rem;
   color: #1b56fd;
   text-align: center;
   margin-top: 2%;
   margin-bottom: 10%;
   font-weight: 300;
+  margin-left: 20%;
+  margin-right: 20%;
+
 }
 
 .download-instruction {
@@ -592,6 +596,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 5%;
 }
 
 .y-axis-label {
@@ -733,13 +738,17 @@ footer {
 
   #title {
     font-size: 2.5em;
-    margin-top: 2%;
+    margin-top: 5%;
+    text-align: left;
+    line-height: 3rem;
   }
 
   .second-title {
     font-size: 1.8em;
-    margin-top: 20%;
+    margin-top: 25%;
     margin-bottom: 20%;
+    margin-left: 0%;
+    margin-right: 0%;
   }
 
   .stat-pill {
@@ -918,5 +927,7 @@ footer {
 
   #logoFooter {
     max-width: 100px;
+    margin: auto;
+    margin-top: 5%;
   }
 }
